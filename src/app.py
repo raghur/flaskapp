@@ -23,6 +23,8 @@ def show_details() :
            "<tr><td> Local Address </td> <td>" + utils.getlocaladdress() + "</td> </tr>" \
            "<tr><td> Remote Address </td> <td>" + request.remote_addr + "</td> </tr>" \
            "<tr><td> Server Hit </td> <td>" + str(hit.getServerHitCount()) + "</td> </tr>" \
+           "<tr><td> Server Hit </td> <td>" + str(hit.getServerHitCount()) + "</td> </tr>" \
+           "<tr><td> Message </td> <td>" + utils.getEnvVar()[0] + "</td><td>" + utils.getEnvVar()[1] + "</td></tr>" \
            "</table>" + \
            "</body>" + \
            "</html>"
@@ -34,7 +36,12 @@ def send_json() :
                      'Hostname': utils.gethostname(),
                      'LocalAddress': utils.getlocaladdress(),
                      'RemoteAddress':  request.remote_addr,
-                     'Server Hit': str(hit.getServerHitCount())} )
+                     'Server Hit': str(hit.getServerHitCount()),
+                     'Env': {
+                         'MESSAGE': utils.getEnvVar()[1]
+                         }
+                     }
+                   )
 
 if __name__ == "__main__":
     app.run(debug = True, host = '0.0.0.0')
