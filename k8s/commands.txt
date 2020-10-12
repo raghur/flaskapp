@@ -1,0 +1,12 @@
+k create deploy webapp --image jcdemo/flaskapp
+
+## access pod dns
+
+look up ip
+
+nslookup 10-244-0-78.default.pod.cluster.local
+
+## expose
+kaf webapp-svc.yaml
+
+## k port-forward svc/webapp 8000:80

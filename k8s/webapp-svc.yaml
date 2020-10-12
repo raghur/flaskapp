@@ -1,24 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: "2020-09-23T12:46:25Z"
   labels:
     app: webapp
   name: webapp
-  namespace: default
-  resourceVersion: "30702965"
-  selfLink: /api/v1/namespaces/default/services/webapp
-  uid: 11ed5b41-7c13-4f5c-9aba-62a0090f39b8
 spec:
-  clusterIP: 10.0.32.85
   ports:
   - port: 80
     protocol: TCP
     targetPort: 5000
   selector:
     app: webapp
-    deployment: blue
   sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}
