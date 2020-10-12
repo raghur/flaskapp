@@ -6,7 +6,7 @@ metadata:
   creationTimestamp: "2020-09-24T06:41:20Z"
   generation: 2
   labels:
-    app: webapp
+    app: webapp-green
     deployment: green
   name: webapp-green
   namespace: default
@@ -19,7 +19,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: webapp
+      app: webapp-green
       deployment: green
   strategy:
     rollingUpdate:
@@ -30,7 +30,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: webapp
+        app: webapp-green
         deployment: green
     spec:
       containers:

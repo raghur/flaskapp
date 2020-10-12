@@ -1,0 +1,8 @@
+kdeld webapp
+kaf webapp-blue
+k del deployment webapp
+
+kaf webapp-blue.yaml
+kaf webapp-green.yaml
+
+

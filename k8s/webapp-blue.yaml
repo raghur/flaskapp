@@ -19,7 +19,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: webapp
+      app: webapp-blue
       deployment: blue
   strategy:
     rollingUpdate:
@@ -30,7 +30,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: webapp
+        app: webapp-blue
         deployment: blue
     spec:
       containers:
