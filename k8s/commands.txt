@@ -1,0 +1,11 @@
+k rollout status deployment/webapp-blue
+
+
+k rollout history deployment/webapp-blue
+
+k scale  --replicas=5 --record=true  deployment/webapp-blue 
+
+
+k edit deployment/webapp-green
+
+k rollout undo --version 1
