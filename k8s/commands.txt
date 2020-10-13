@@ -1,0 +1,10 @@
+klf --since 30m webapp-green
+
+klf -l "app=webapp-green"
+
+
+## show previous logs
+kubectl run bashlog --image debian -- bash -c 'for i in `seq 1 5`; do echo `hostname`-iteration-$i; sleep 10; done; echo
+Im dying....'
+
+kl -p  to show previous logs
