@@ -28,8 +28,8 @@ spec:
         env:
           - name: MESSAGE       # Upper case - what the app expects
             valueFrom:
-              configMapKeyRef:
-                  name: webapp-config
+              secretKeyRef:
+                  name: webapp-secret
                   key: message  # Lower case - what's in the cm
         imagePullPolicy: Always
         name: flaskapp-env
